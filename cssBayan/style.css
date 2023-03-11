@@ -55,11 +55,6 @@
   align-items: center;
 }
 
-.plus-icon {
-  width: 8px;
-  height: 8px;
-}
-
 .dropp {
   display: flex;
   justify-content: center;
@@ -81,4 +76,19 @@
   right: 0;
   scale: 2;
   color: transparent;
+}
+
+@media screen and (min-width: 820px) {
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .rules-wrap:hover .dropp {
+    height: 220px;
+  }
+
+  .main-container {
+    font-size: 1rem;
+  }
 }
