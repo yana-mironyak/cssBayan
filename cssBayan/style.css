@@ -20,14 +20,36 @@
   position: relative;
   flex-direction: column;
   border-top: 0.1rem solid #cdc7c7;
+  outline: none;
 }
 
 .rules-wrap:hover .dropp {
   height: 110px;
   opacity: 1;
+  scale: 1;
+}
+
+.card-container:hover .icon {
+  color: black;
+}
+
+.rules-wrap:hover .icon,
+.rules-wrap:focus .icon {
+  transform: rotate(45deg);
+}
+
+.rules-wrap:focus .dropp {
+  height: 110px;
+  opacity: 1;
+  scale: 1;
+}
+
+.rules-wrap:focus {
+  color: black;
 }
 
 .card-box {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,10 +66,19 @@
   width: 100%;
   height: 0;
   opacity: 0;
-  transition: transform 1.2s, opacity 1s, height 0.5s;
+  scale: 0;
+  transition: transform 1.2s, scale 0.4s, height 0.1s;
 }
 
 .image {
   width: 100px;
   height: 100px;
+}
+
+.icon {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  scale: 2;
+  color: transparent;
 }
