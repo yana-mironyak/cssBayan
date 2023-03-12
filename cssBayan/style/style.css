@@ -44,6 +44,10 @@
   scale: 1;
 }
 
+.rules-wrap:active {
+  color: blue;
+}
+
 .rules-input:checked ~ .card-box {
   color: black;
 }
