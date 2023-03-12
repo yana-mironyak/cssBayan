@@ -97,7 +97,7 @@
     font-size: 1rem;
   }
 
-  .rules-wrap:focus .dropp {
+  .rules-input:checked ~ .dropp {
     height: 14rem;
   }
 }
@@ -116,7 +116,7 @@
     font-size: 2rem;
   }
 
-  .rules-wrap:focus .dropp {
+  .rules-input:checked ~ .dropp {
     height: 34rem;
   }
 }
