@@ -1,0 +1,129 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.card-container {
+  color: blue;
+}
+
+.card-container:hover {
+  color: black;
+}
+
+.rules-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-top: 0.1rem solid #cdc7c7;
+  outline: none;
+  cursor: pointer;
+}
+
+.rules-wrap:hover .dropp {
+  height: 7rem;
+  opacity: 1;
+  scale: 1;
+}
+
+.rules-wrap:hover .icon-plus,
+.rules-input:checked ~ .card-box > .icon-plus {
+  transform: rotate(45deg);
+}
+
+.rules-wrap:active {
+  color: blue;
+  opacity: 0.5;
+}
+
+.rules-input:checked ~ .card-box {
+  color: black;
+}
+
+.rules-input {
+  display: none;
+}
+
+.rules-input:checked ~ .dropp {
+  height: 7rem;
+  opacity: 1;
+  scale: 1;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropp {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  scale: 0;
+  transition: transform 1.2s, scale 0.4s, height 0.1s;
+}
+
+.image {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+@media screen and (min-width: 320px) {
+  .icon-plus {
+    color: black;
+    transition: transform 0.5s;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .image {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .rules-wrap:hover .dropp {
+    height: 14rem;
+  }
+
+  .main-container {
+    font-size: 1rem;
+  }
+
+  .rules-input:checked ~ .dropp {
+    height: 14rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .image {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  .rules-wrap:hover .dropp {
+    height: 34rem;
+  }
+
+  .main-container {
+    font-size: 2rem;
+  }
+
+  .rules-input:checked ~ .dropp {
+    height: 34rem;
+  }
+
+  .icon-plus {
+    color: transparent;
+    transition: transform 0.5s;
+  }
+
+  .card-container:hover .icon-plus {
+    color: black;
+  }
+}
