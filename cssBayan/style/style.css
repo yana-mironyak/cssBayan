@@ -29,23 +29,14 @@
   scale: 1;
 }
 
-.card-container:hover .icon-plus {
-  color: black;
-}
-
 .rules-wrap:hover .icon-plus,
 .rules-input:checked ~ .card-box > .icon-plus {
   transform: rotate(45deg);
 }
 
-.rules-wrap:focus .dropp {
-  height: 7rem;
-  opacity: 1;
-  scale: 1;
-}
-
 .rules-wrap:active {
   color: blue;
+  opacity: 0.5;
 }
 
 .rules-input:checked ~ .card-box {
@@ -83,8 +74,11 @@
   height: 6.5rem;
 }
 
-.icon-plus {
-  color: transparent;
+@media screen and (min-width: 320px) {
+  .icon-plus {
+    color: black;
+    transition: transform 0.5s;
+  }
 }
 
 @media screen and (min-width: 820px) {
@@ -122,5 +116,14 @@
 
   .rules-input:checked ~ .dropp {
     height: 34rem;
+  }
+
+  .icon-plus {
+    color: transparent;
+    transition: transform 0.5s;
+  }
+
+  .card-container:hover .icon-plus {
+    color: black;
   }
 }
